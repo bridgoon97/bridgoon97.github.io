@@ -6,6 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Yue
 middle_name: 
 last_name: Qiao
+chinese_name: 乔越
 email: yqiao@princeton.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
@@ -14,7 +15,7 @@ footer_text: >
 keywords:  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🔥 # the emoji used as the favicon
+# icon # 🔥 # the emoji used as the favicon
 url: https://bridgoon97.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/
 last_updated: Feb 6, 2022 # set to true if you want to display last updated in the footer
@@ -69,7 +70,7 @@ gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
 linkedin_username: yue-qiao-509289119 # your LinkedIn user name
 scholar_userid : 8_uEXGUAAAAJ # your Google Scholar ID
-orcid_id: 0000-0003-1095-3115 # your ORCID ID
+orcid_id: # 0000-0003-1095-3115 # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons
@@ -82,7 +83,6 @@ dblp_url: # your DBLP profile url
 stackoverflow_id: #your stackoverflow id
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -290,7 +290,7 @@ enable_masonry:             true   # enables automatic project cards arangement
 enable_math:                true   # enables math typesetting (uses MathJax)
 enable_tooltips:            false  # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
-enable_darkmode:            true   # enables switching between light/dark modes
+enable_darkmode:            false   # enables switching between light/dark modes
 enable_navbar_social:       false  # enables displaying social links in the
                                    # navbar on the about page
 enable_project_categories:  true   # enables categorization of projects into
