@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2021-10
 inline: true
 ---
 
-A simple inline announcement.
+Our E-brief paper on using SDM method for personal sound delivery is accepted and will be presented at the 151st AES Convention!

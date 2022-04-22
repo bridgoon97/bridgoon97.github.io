@@ -19,7 +19,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hello! I am a third-year Ph.D. candidate in the [3D Audio and Applied Acoustics (3D3A) Lab](https://www.princeton.edu/3D3A/) at Princeton University, advised by Prof. Edgar Choueiri. I received a B.S. in Physics and a minor in Art History at Peking University in 2019.
 
-I am generally interested in spatial audio processing, including binaural audio reproduction using loudspeakers/headphones and sound field control. My current focus is on building robust and adaptive personal sound zone systems that allows headphone-free binaural audio delivery to multiple listeners. In my spare time, I am also enthusiastic in music performing & composing, and was an active member of the [Princeton Laptop Orchestra (PLOrk)](https://plork.princeton.edu/).
+I am generally interested in spatial audio processing, including binaural audio reproduction using loudspeakers/headphones and sound field control. My current focus is on building robust and adaptive personal sound zone systems that allow headphone-free binaural audio delivery to multiple listeners. In my spare time, I am also enthusiastic in music performing & composing, and am proudly a member of the [Princeton Laptop Orchestra (PLOrk)](https://plork.princeton.edu/).
 
 
 
