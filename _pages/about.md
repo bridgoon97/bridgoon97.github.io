@@ -6,7 +6,7 @@ subtitle: # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: Yue_winter_pic.jpg
+  image: Yue_summer.jpg
   address: 
     # <p>555 your office number</p>
     # <p>123 your address street</p>
@@ -17,9 +17,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hello, I am a fourth-year Ph.D. candidate in the [3D Audio and Applied Acoustics (3D3A) Lab](https://www.princeton.edu/3D3A/) at Princeton University, advised by Prof. Edgar Choueiri. I received a B.S. in Physics and a minor in Art History at Peking University in 2019.
+Hello, I am a fifth-year Ph.D. candidate in the [3D Audio and Applied Acoustics (3D3A) Lab](https://www.princeton.edu/3D3A/) at Princeton University, advised by Prof. Edgar Choueiri. I received a B.S. in Physics and a minor in Art History at Peking University in 2019.
 
-I am generally interested in spatial audio processing, including binaural audio reproduction using loudspeakers/headphones and sound field control. My current focus is on building robust and adaptive personal sound zone systems that allow headphone-free binaural audio delivery to multiple listeners. In my spare time, I am also enthusiastic in performing & composing music, and am proudly a member of the [Princeton Laptop Orchestra (PLOrk)](https://plork.princeton.edu/). (Here is an [interview](https://mae.princeton.edu/about-mae/spotlight/yue-qiao-enhancing-sound-experience) of me if you are interested to know more!)
+I am interested in spatial audio reproduction, real-time audio DSP with deep learning, and VR/AR audio in general. During my PhD, I have been focusing on building head-tracked personal sound zone systems that allow headphone-free, personalized spatial audio delivery to multiple listeners. In my spare time, I am also enthusiastic in performing & composing music, and am a member of the [Princeton Laptop Orchestra (PLOrk)](https://plork.princeton.edu/). (Here is an [interview](https://mae.princeton.edu/about-mae/spotlight/yue-qiao-enhancing-sound-experience) of me if you are interested to know more!)
+
+**I am currently looking for industry opportunities in spatial audio related research roles after my PhD graduation (expected in Summer 2024). Please contact me if you know of such positions!** :slightly_smiling_face:
 
 
 
