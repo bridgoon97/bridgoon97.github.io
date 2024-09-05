@@ -21,8 +21,6 @@ Hello, I am a fifth-year Ph.D. candidate in the [3D Audio and Applied Acoustics 
 
 I am interested in spatial audio reproduction, real-time audio DSP with deep learning, and VR/AR audio in general. During my PhD, I have been focusing on building head-tracked personal sound zone systems that allow headphone-free, personalized spatial audio delivery to multiple listeners. In my spare time, I am also enthusiastic in performing & composing music, and am a member of the [Princeton Laptop Orchestra (PLOrk)](https://plork.princeton.edu/). (Here is an [interview](https://mae.princeton.edu/about-mae/spotlight/yue-qiao-enhancing-sound-experience) of me if you are interested to know more!)
 
-**I am currently looking for industry opportunities in spatial audio related research roles after my PhD graduation (expected in Summer 2024). Please contact me if you know of such positions!** :slightly_smiling_face:
-
 
 
 <!-- Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->
