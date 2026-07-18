@@ -1,0 +1,12 @@
+---
+import { site } from '../data/site';
+import { markedBlock } from '../lib/marked-inline';
+
+const zh = markedBlock(site.bio.zh);
+const en = markedBlock(site.bio.en);
+---
+
+<section class="bio">
+  <div class="zh-only" set:html={zh}></div>
+  <div class="en-only" set:html={en}></div>
+</section>

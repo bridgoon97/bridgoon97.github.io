@@ -1,0 +1,18 @@
+---
+// Inline pre-render script: sets lang + theme attributes BEFORE first paint
+// to prevent flash of wrong language / wrong theme.
+// Default lang: zh. Theme follows system unless user has chosen.
+---
+
+<script is:inline>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+      var l = localStorage.getItem('lang');
+      document.documentElement.setAttribute('lang', l === 'en' ? 'en' : 'zh');
+    } catch (e) {}
+  })();
+</script>

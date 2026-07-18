@@ -1,0 +1,70 @@
+---
+import Base from '../../layouts/Base.astro';
+import { i18n } from '../../data/i18n';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const sorted = allPosts.sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const zhPosts = sorted.filter(p => p.data.lang === 'zh');
+const enPosts = sorted.filter(p => p.data.lang === 'en');
+
+const fmt = (d: Date, lang: 'zh' | 'en') =>
+  d.toLocaleDateString(lang === 'zh' ? 'zh-CN' : 'en-US', {
+    year: 'numeric', month: 'short', day: 'numeric',
+  });
+---
+
+<Base title="Blog — Yue Qiao">
+  <header class="page-header">
+    <h1>
+      <span class="zh-only">{i18n.page.blog.title.zh}</span>
+      <span class="en-only">{i18n.page.blog.title.en}</span>
+    </h1>
+    <p class="desc">
+      <span class="zh-only">{i18n.page.blog.desc.zh}</span>
+      <span class="en-only">{i18n.page.blog.desc.en}</span>
+    </p>
+  </header>
+
+  <!-- Chinese list -->
+  <div class="zh-only">
+    {zhPosts.length === 0 ? (
+      <p class="blog-empty">{i18n.page.blog.empty.zh}</p>
+    ) : (
+      <div class="blog-list">
+        {zhPosts.map(p => (
+          <div class="blog-row">
+            <span class="blog-date">{fmt(p.data.date, 'zh')}</span>
+            <div>
+              <h2 class="blog-title"><a href={`/blog/${p.slug}/`}>{p.data.title}</a></h2>
+              {p.data.description && <p class="blog-desc">{p.data.description}</p>}
+            </div>
+            <span class="blog-lang-badge">ZH</span>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+
+  <!-- English list -->
+  <div class="en-only">
+    {enPosts.length === 0 ? (
+      <p class="blog-empty">{i18n.page.blog.empty.en}</p>
+    ) : (
+      <div class="blog-list">
+        {enPosts.map(p => (
+          <div class="blog-row">
+            <span class="blog-date">{fmt(p.data.date, 'en')}</span>
+            <div>
+              <h2 class="blog-title"><a href={`/blog/${p.slug}/`}>{p.data.title}</a></h2>
+              {p.data.description && <p class="blog-desc">{p.data.description}</p>}
+            </div>
+            <span class="blog-lang-badge">EN</span>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</Base>

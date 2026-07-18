@@ -1,0 +1,38 @@
+---
+import { i18n } from '../data/i18n';
+import { publications } from '../data/publications';
+import { site } from '../data/site';
+
+const selected = publications.filter(p => p.selected);
+
+const renderAuthors = (authors: string[]) =>
+  authors.map(a =>
+    a === site.name.en ? `<em>${a}</em>` : a
+  ).join(', ');
+---
+
+<section id="selected-pubs">
+  <div class="section-head">
+    <h2>
+      <span class="zh-only">{i18n.sections.selected_pubs.zh}</span>
+      <span class="en-only">{i18n.sections.selected_pubs.en}</span>
+    </h2>
+    <a class="more" href="/publications/">
+      <span class="zh-only">{i18n.sections.all.zh}</span>
+      <span class="en-only">{i18n.sections.all.en}</span>
+    </a>
+  </div>
+
+  <div class="pub-list">
+    {selected.map(p => (
+      <div class="pub-row">
+        <span class="pub-year">{p.year}</span>
+        <div>
+          <p class="pub-title">{p.title}</p>
+          <p class="pub-authors" set:html={renderAuthors(p.authors)}></p>
+        </div>
+        <span class="pub-tag">{p.venue}</span>
+      </div>
+    ))}
+  </div>
+</section>

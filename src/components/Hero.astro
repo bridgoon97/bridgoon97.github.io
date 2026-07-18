@@ -1,0 +1,55 @@
+---
+import { site } from '../data/site';
+import { marked } from '../lib/marked-inline';
+
+// Render markdown inline (single paragraph, links, no wrapping <p>)
+const taglineZh = marked(site.tagline.zh);
+const taglineEn = marked(site.tagline.en);
+---
+
+<div class="hero">
+  <div>
+    {site.status && (
+      <div class="status">
+        <span class="pulse"></span>
+        <span class="zh-only">{site.status.zh}</span>
+        <span class="en-only">{site.status.en}</span>
+      </div>
+    )}
+
+    <h1>
+      <span class="zh-only">{site.name.zh}<span class="secondary">{site.name.en}</span></span>
+      <span class="en-only">{site.name.en}<span class="secondary">{site.name.zh}</span></span>
+    </h1>
+
+    <p class="tagline">
+      <span class="zh-only" set:html={taglineZh}></span>
+      <span class="en-only" set:html={taglineEn}></span>
+    </p>
+
+    <div class="quickfacts">
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span class="zh-only">{site.quickfacts.location.zh}</span>
+        <span class="en-only">{site.quickfacts.location.en}</span>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/>
+        </svg>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20"/>
+        </svg>
+        <span class="zh-only">{site.quickfacts.advisor.zh}</span>
+        <span class="en-only">{site.quickfacts.advisor.en}</span>
+      </div>
+    </div>
+  </div>
+
+  <img class="hero-img" src={site.profileImage} alt={`${site.name.en} ${site.name.zh}`} />
+</div>

@@ -1,0 +1,36 @@
+---
+import { i18n } from '../data/i18n';
+import { highlights } from '../data/highlights';
+---
+
+<section id="research">
+  <div class="section-head">
+    <h2>
+      <span class="zh-only">{i18n.sections.highlights.zh}</span>
+      <span class="en-only">{i18n.sections.highlights.en}</span>
+    </h2>
+  </div>
+
+  <div class="highlights">
+    {highlights.map(h => {
+      const Tag = h.href ? 'a' : 'div';
+      const props = h.href ? { href: h.href, class: 'card' } : { class: 'card' };
+      return (
+        <Tag {...props}>
+          <span class="badge">
+            <span class="zh-only">{h.badge.zh}</span>
+            <span class="en-only">{h.badge.en}</span>
+          </span>
+          <h3>
+            <span class="zh-only">{h.title.zh}</span>
+            <span class="en-only">{h.title.en}</span>
+          </h3>
+          <p>
+            <span class="zh-only">{h.desc.zh}</span>
+            <span class="en-only">{h.desc.en}</span>
+          </p>
+        </Tag>
+      );
+    })}
+  </div>
+</section>

@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Bio from '../components/Bio.astro';
+import Highlights from '../components/Highlights.astro';
+import NewsList from '../components/NewsList.astro';
+import SelectedPublications from '../components/SelectedPublications.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Base title="Yue Qiao 乔越 — Spatial Audio Researcher">
+  <Hero />
+  <Bio />
+  <Highlights />
+  <NewsList limit={6} />
+  <SelectedPublications />
+  <Contact />
+</Base>

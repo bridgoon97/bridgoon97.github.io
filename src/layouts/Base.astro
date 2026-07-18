@@ -1,0 +1,74 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import ThemeLangScript from '../components/ThemeLangScript.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** narrower reading column for blog posts */
+  reading?: boolean;
+}
+
+const {
+  title = 'Yue Qiao 乔越',
+  description = 'PhD candidate at Princeton 3D3A Lab. Spatial audio, head-tracked personal sound zones.',
+  reading = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={Astro.url.href} />
+
+    <!-- OG / Twitter -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Set lang + theme before first paint -->
+    <ThemeLangScript />
+  </head>
+
+  <body>
+    <Nav />
+
+    <main class={reading ? 'wrap reading' : 'wrap'}>
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script>
+      // Theme + language toggle handlers.
+      // Pre-render script in <head> already set initial state; here we wire up the buttons.
+      const root = document.documentElement;
+      const themeBtn = document.getElementById('themeToggle');
+      const langBtn  = document.getElementById('langToggle');
+
+      themeBtn?.addEventListener('click', () => {
+        const cur = root.getAttribute('data-theme');
+        const sysDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        const next = cur
+          ? (cur === 'dark' ? 'light' : 'dark')
+          : (sysDark ? 'light' : 'dark');
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+
+      langBtn?.addEventListener('click', () => {
+        const next = root.getAttribute('lang') === 'zh' ? 'en' : 'zh';
+        root.setAttribute('lang', next);
+        localStorage.setItem('lang', next);
+      });
+    </script>
+  </body>
+</html>

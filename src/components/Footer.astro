@@ -1,0 +1,19 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div>
+    <a href={`mailto:${site.social.email}`}>email</a>
+    <a href={site.social.scholar}>scholar</a>
+    <a href={site.social.github}>github</a>
+    <a href={site.social.twitter}>twitter</a>
+    <a href={site.social.linkedin}>linkedin</a>
+  </div>
+  <span>
+    © {year}
+    <span class="zh-only">{site.name.zh}</span>
+    <span class="en-only">{site.name.en.toLowerCase()}</span>
+  </span>
+</footer>

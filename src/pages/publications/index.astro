@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import { i18n } from '../../data/i18n';
+import { publications } from '../../data/publications';
+import { site } from '../../data/site';
+
+const sorted = [...publications].sort((a, b) => b.year - a.year);
+
+// Group by year (preserving descending order)
+const byYear: Record<number, typeof publications> = {};
+for (const p of sorted) {
+  (byYear[p.year] ||= []).push(p);
+}
+const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
+
+const renderAuthors = (authors: string[]) =>
+  authors.map(a => a === site.name.en ? `<em>${a}</em>` : a).join(', ');
+
+const pdfHref = (pdf: string) =>
+  pdf.startsWith('http') ? pdf : `/assets/pdf/${pdf}`;
+---
+
+<Base title="Publications — Yue Qiao">
+  <header class="page-header">
+    <h1>
+      <span class="zh-only">{i18n.page.publications.title.zh}</span>
+      <span class="en-only">{i18n.page.publications.title.en}</span>
+    </h1>
+    <p class="desc">
+      <span class="zh-only">{i18n.page.publications.desc.zh}</span>
+      <span class="en-only">{i18n.page.publications.desc.en}</span>
+    </p>
+  </header>
+
+  <div class="pub-list">
+    {years.map(year => (
+      <>
+        <div class="pub-year-header">{year}</div>
+        {byYear[year].map(p => (
+          <div class="pub-row grouped">
+            <div>
+              <p class="pub-title">{p.title}</p>
+              <p class="pub-authors" set:html={renderAuthors(p.authors)}></p>
+              {p.venueFull && <p class="pub-venue-full">{p.venueFull}</p>}
+              {p.links && (
+                <div class="pub-links">
+                  {p.links.pdf     && <a class="pub-link" href={pdfHref(p.links.pdf)}>pdf</a>}
+                  {p.links.slides  && <a class="pub-link" href={pdfHref(p.links.slides)}>slides</a>}
+                  {p.links.html    && <a class="pub-link" href={p.links.html}>html</a>}
+                  {p.links.code    && <a class="pub-link" href={p.links.code}>code</a>}
+                  {p.links.website && <a class="pub-link" href={p.links.website}>website</a>}
+                </div>
+              )}
+            </div>
+            <span class="pub-tag">{p.venue}</span>
+          </div>
+        ))}
+      </>
+    ))}
+  </div>
+</Base>

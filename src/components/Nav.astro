@@ -1,0 +1,38 @@
+---
+import { i18n } from '../data/i18n';
+const { pathname } = Astro.url;
+const isActive = (path: string) => pathname === path || pathname === path + '/';
+---
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">yue<span class="dot">.</span>qiao</a>
+
+    <div class="nav-links">
+      <a href="/" class={isActive('/') ? 'active' : ''}>
+        <span class="zh-only">{i18n.nav.about.zh}</span>
+        <span class="en-only">{i18n.nav.about.en}</span>
+      </a>
+      <a href="/publications/" class={isActive('/publications') ? 'active' : ''}>
+        <span class="zh-only">{i18n.nav.publications.zh}</span>
+        <span class="en-only">{i18n.nav.publications.en}</span>
+      </a>
+      <a href="/blog/" class={pathname.startsWith('/blog') ? 'active' : ''}>
+        <span class="zh-only">{i18n.nav.blog.zh}</span>
+        <span class="en-only">{i18n.nav.blog.en}</span>
+      </a>
+      <a href="/assets/pdf/YueQiao_resume.pdf">
+        <span class="zh-only">{i18n.nav.cv.zh}</span>
+        <span class="en-only">{i18n.nav.cv.en}</span>
+      </a>
+
+      <div class="toggle-group">
+        <button class="pill lang-toggle" id="langToggle" aria-label="Toggle language / 切换语言">
+          <span class="zh-only"><span class="active">中</span> / EN</span>
+          <span class="en-only">中 / <span class="active">EN</span></span>
+        </button>
+        <button class="pill" id="themeToggle" aria-label="Toggle theme / 切换主题" title="Theme">◐</button>
+      </div>
+    </div>
+  </div>
+</nav>
