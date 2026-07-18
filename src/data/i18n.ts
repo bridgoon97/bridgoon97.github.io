@@ -7,7 +7,6 @@ export const i18n = {
   nav: {
     about:        { zh: '关于',   en: 'about' },
     publications: { zh: '论文',   en: 'publications' },
-    blog:         { zh: '博客',   en: 'blog' },
     cv:           { zh: '简历',   en: 'cv' },
   },
   sections: {
@@ -22,12 +21,6 @@ export const i18n = {
       title: { zh: '论文', en: 'publications' },
       desc:  { zh: '同行评议的期刊与会议论文。',
                en: 'Peer-reviewed journal and conference publications.' },
-    },
-    blog: {
-      title: { zh: '博客', en: 'blog' },
-      desc:  { zh: '关于声学、信号处理、深度学习的零散思考。',
-               en: 'Notes on acoustics, signal processing, and machine learning.' },
-      empty: { zh: '暂无文章。',  en: 'No posts yet.' },
     },
   },
 };

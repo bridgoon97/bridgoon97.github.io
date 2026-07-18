@@ -10,13 +10,33 @@ export interface NewsItem {
 
 export const news: NewsItem[] = [
   {
+    date: '2025-04-06',
+    zh: '我在腾讯 AI Lab 实习期间的<a href="https://bridgoon97.github.io/NeuralAmbisonicEncoding/">工作</a>在 ICASSP 2025 上展示，提出了一种面向多说话人场景、基于神经网络的圆形麦克风阵列 Ambisonics 编码方法。',
+    en: 'My <a href="https://bridgoon97.github.io/NeuralAmbisonicEncoding/">internship work</a> at Tencent AI Lab was presented at ICASSP 2025 — a neural Ambisonics encoding method for multi-speaker scenarios using a circular microphone array.',
+  },
+  {
+    date: '2025-06-20',
+    zh: '我们关于头部追踪独立音区的最新工作<a href="https://ieeexplore.ieee.org/document/11045429">「SANN-PSZ」</a>发表于 <i>IEEE/ACM Transactions on Audio, Speech, and Language Processing</i>，提出了一种空间自适应神经网络用于独立音区复现。',
+    en: 'Our latest work on head-tracked personal sound zones, <a href="https://ieeexplore.ieee.org/document/11045429">"SANN-PSZ"</a>, was published in <i>IEEE/ACM Transactions on Audio, Speech, and Language Processing</i> — a spatially adaptive neural network for personal sound zone reproduction.',
+  },
+  {
+    date: '2024-12-01',
+    zh: '通过华为「天才少年」（Topminds）人才计划入职华为 2012 实验室，从事音频算法研究。',
+    en: 'Joined Huawei\'s 2012 Labs through the Huawei Topminds program, working on audio algorithm research.',
+  },
+  {
+    date: '2024-11-01',
+    zh: '在普林斯顿大学完成机械与航空航天工程博士学位。',
+    en: 'Completed my Ph.D. in Mechanical and Aerospace Engineering at Princeton.',
+  },
+  {
     date: '2024-05-09',
     zh: '荣获 <a href="https://researchday.princeton.edu/present/awards/2024-award-winners">普林斯顿研究日 2024</a> 颁发的「创新与企业家精神奖」。可以观看我们的<a href="https://mediacentral.princeton.edu/media/t/1_zgdy60td">获奖视频</a>。',
     en: 'I was given the Innovation and Entrepreneurial Mindset Award at <a href="https://researchday.princeton.edu/present/awards/2024-award-winners">Princeton Research Day 2024</a>. Check out our <a href="https://mediacentral.princeton.edu/media/t/1_zgdy60td">award-winning video</a>.',
   },
   {
     date: '2023-12-08',
-    zh: '在 Acoustics Sydney 2023 上做了关于<a href="https://pubs.aip.org/asa/jasa/article/154/4_supplement/A182/2924110/Experimental-evaluation-of-bilateral-Ambisonics">双侧 Ambisonics 实验评估</a>的报告，讨论了其用于合成双耳房间传递函数（BRTF）以及在个人声区中的应用。(<a href="/assets/pdf/Slides_Acoustics_Sydney_2023.pdf">slides</a>)',
+    zh: '在 Acoustics Sydney 2023 上做了关于<a href="https://pubs.aip.org/asa/jasa/article/154/4_supplement/A182/2924110/Experimental-evaluation-of-bilateral-Ambisonics">双侧 Ambisonics 实验评估</a>的报告，讨论了其用于合成双耳房间传递函数（BRTF）以及在独立音区中的应用。(<a href="/assets/pdf/Slides_Acoustics_Sydney_2023.pdf">slides</a>)',
     en: 'I gave a presentation at Acoustics Sydney 2023 on our <a href="https://pubs.aip.org/asa/jasa/article/154/4_supplement/A182/2924110/Experimental-evaluation-of-bilateral-Ambisonics">latest work</a> on experimental evaluation of bilateral Ambisonics for synthesizing BRTFs in personal sound zones. (<a href="/assets/pdf/Slides_Acoustics_Sydney_2023.pdf">slides</a>)',
   },
   {
@@ -26,7 +46,7 @@ export const news: NewsItem[] = [
   },
   {
     date: '2023-09-07',
-    zh: '在 I3DA 2023 会议上展示了我们的<a href="https://ieeexplore.ieee.org/abstract/document/10289558">工作</a>「带串扰消除的个人声区性能优化」。',
+    zh: '在 I3DA 2023 会议上展示了我们的<a href="https://ieeexplore.ieee.org/abstract/document/10289558">工作</a>「带串扰消除的独立音区性能优化」。',
     en: 'I presented our <a href="https://ieeexplore.ieee.org/abstract/document/10289558">work</a> "Performance Optimization of Personal Sound Zones with Crosstalk Cancellation" at 2023 I3DA Conference.',
   },
   {
@@ -36,7 +56,7 @@ export const news: NewsItem[] = [
   },
   {
     date: '2023-05-15',
-    zh: '我们关于个人声区的<a href="https://www.aes.org/e-lib/browse.cfm?elib=22071">最新工作</a>在芬兰阿尔托大学举办的 AES 154 上展示，讨论了头部追踪个人声区的最优空间采样方案。',
+    zh: '我们关于独立音区的<a href="https://www.aes.org/e-lib/browse.cfm?elib=22071">最新工作</a>在芬兰阿尔托大学举办的 AES 154 上展示，讨论了头部追踪独立音区的最优空间采样方案。',
     en: 'Our <a href="https://www.aes.org/e-lib/browse.cfm?elib=22071">latest work</a> on personal sound zones was presented at AES 154 at Aalto University in Finland. We discussed optimal spatial sampling scheme for head-tracked personal sound zones.',
   },
   {

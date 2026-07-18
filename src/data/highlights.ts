@@ -12,7 +12,7 @@ export const highlights: Highlight[] = [
   {
     badge: { zh: 'PSZ', en: 'PSZ' },
     title: {
-      zh: '头部追踪的个人声区',
+      zh: '头部追踪的独立音区',
       en: 'Head-tracked personal sound zones',
     },
     desc: {
@@ -32,14 +32,15 @@ export const highlights: Highlight[] = [
     },
   },
   {
-    badge: { zh: '数据集', en: 'DATA' },
+    badge: { zh: 'Ambisonics', en: 'AMBISONICS' },
     title: {
-      zh: '开源 BRIR 数据集',
-      en: 'Open BRIR dataset',
+      zh: '神经网络 Ambisonics 编码',
+      en: 'Neural Ambisonic encoding',
     },
     desc: {
-      zh: '多扬声器、高分辨率头部平移与旋转坐标的双耳房间冲激响应数据集，已开源供学界使用。',
-      en: 'High-resolution multi-loudspeaker BRIRs with translational and rotational head coordinates, released for the research community.',
+      zh: '面向多说话人场景，用两级神经网络将圆形麦克风阵列信号编码为 Ambisonics（腾讯 AI Lab 实习工作）。',
+      en: 'A two-stage neural network that encodes circular microphone array signals into Ambisonics for multi-speaker scenes (Tencent AI Lab internship).',
     },
+    href: 'https://bridgoon97.github.io/NeuralAmbisonicEncoding/',
   },
 ];

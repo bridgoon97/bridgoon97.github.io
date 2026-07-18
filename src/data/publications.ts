@@ -20,6 +20,35 @@ export interface Publication {
 
 export const publications: Publication[] = [
   {
+    year: 2025,
+    title: 'SANN-PSZ: Spatially Adaptive Neural Network for Head-Tracked Personal Sound Zones',
+    authors: ['Yue Qiao', 'Edgar Choueiri'],
+    venue: 'IEEE/ACM TASLP',
+    venueFull: 'IEEE/ACM Transactions on Audio, Speech, and Language Processing',
+    selected: true,
+    links: { html: 'https://ieeexplore.ieee.org/document/11045429', pdf: 'https://arxiv.org/pdf/2411.00772' },
+  },
+  {
+    year: 2025,
+    title: 'Neural Ambisonic Encoding for Multi-Speaker Scenarios Using a Circular Microphone Array',
+    authors: ['Yue Qiao', 'Vinay Kothapally', 'Meng Yu', 'Dong Yu'],
+    venue: 'ICASSP',
+    venueFull: 'IEEE International Conference on Acoustics, Speech and Signal Processing',
+    selected: true,
+    links: {
+      html: 'https://ieeexplore.ieee.org/document/10890048',
+      pdf: 'https://arxiv.org/pdf/2409.06954',
+      website: 'https://bridgoon97.github.io/NeuralAmbisonicEncoding/',
+    },
+  },
+  {
+    year: 2024,
+    title: 'Personal Sound Zone Rendering with Listener Individualization and Head Tracking',
+    authors: ['Yue Qiao'],
+    venue: 'PhD Thesis',
+    venueFull: 'Ph.D. Dissertation, Princeton University',
+  },
+  {
     year: 2024,
     title: 'Spatial Sampling of Binaural Room Transfer Functions for Head-Tracked Personal Sound Zones',
     authors: ['Yue Qiao', 'Jessica Luo', 'Edgar Choueiri'],

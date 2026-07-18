@@ -17,10 +17,6 @@ const isActive = (path: string) => pathname === path || pathname === path + '/';
         <span class="zh-only">{i18n.nav.publications.zh}</span>
         <span class="en-only">{i18n.nav.publications.en}</span>
       </a>
-      <a href="/blog/" class={pathname.startsWith('/blog') ? 'active' : ''}>
-        <span class="zh-only">{i18n.nav.blog.zh}</span>
-        <span class="en-only">{i18n.nav.blog.en}</span>
-      </a>
       <a href="/assets/pdf/YueQiao_resume.pdf">
         <span class="zh-only">{i18n.nav.cv.zh}</span>
         <span class="en-only">{i18n.nav.cv.en}</span>
