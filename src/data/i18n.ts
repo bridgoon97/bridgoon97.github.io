@@ -10,9 +10,10 @@ export const i18n = {
     cv:           { zh: '简历',   en: 'cv' },
   },
   sections: {
-    highlights:    { zh: '// 研究方向',  en: '// research highlights' },
+    highlights:    { zh: '// 工作与研究方向',  en: '// work & research' },
     news:          { zh: '// 近期动态',  en: '// news' },
     selected_pubs: { zh: '// 代表论文',  en: '// selected publications' },
+    music:         { zh: '// 声音与音乐', en: '// sound & music' },
     contact:       { zh: '// 联系方式',  en: '// contact' },
     all:           { zh: '全部 →',       en: 'all →' },
   },

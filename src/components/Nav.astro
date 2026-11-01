@@ -1,5 +1,6 @@
 ---
 import { i18n } from '../data/i18n';
+import { site } from '../data/site';
 const { pathname } = Astro.url;
 const isActive = (path: string) => pathname === path || pathname === path + '/';
 ---
@@ -17,10 +18,8 @@ const isActive = (path: string) => pathname === path || pathname === path + '/';
         <span class="zh-only">{i18n.nav.publications.zh}</span>
         <span class="en-only">{i18n.nav.publications.en}</span>
       </a>
-      <a href="/assets/pdf/YueQiao_resume.pdf">
-        <span class="zh-only">{i18n.nav.cv.zh}</span>
-        <span class="en-only">{i18n.nav.cv.en}</span>
-      </a>
+      <a class="zh-only" href={site.resume.zh}>{i18n.nav.cv.zh}</a>
+      <a class="en-only" href={site.resume.en}>{i18n.nav.cv.en}</a>
 
       <div class="toggle-group">
         <button class="pill lang-toggle" id="langToggle" aria-label="Toggle language / 切换语言">

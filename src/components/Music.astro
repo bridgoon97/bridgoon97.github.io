@@ -1,0 +1,48 @@
+---
+import { i18n } from '../data/i18n';
+import { site } from '../data/site';
+import { videos } from '../data/videos';
+---
+
+<section id="music">
+  <div class="section-head">
+    <h2>
+      <span class="zh-only">{i18n.sections.music.zh}</span>
+      <span class="en-only">{i18n.sections.music.en}</span>
+    </h2>
+  </div>
+  <div class="music-channels">
+    <span class="zh-only">更多作品：</span>
+    <span class="en-only">More videos:</span>
+    <a href={site.social.bilibili}>Bilibili ↗</a>
+    <a href={site.social.youtube}>YouTube ↗</a>
+  </div>
+  <div class="highlights music-grid">
+    {videos.map(video => (
+      <article class="card">
+        <span class="badge">
+          <span class="zh-only">{video.category.zh}</span>
+          <span class="en-only">{video.category.en}</span>
+        </span>
+        <h3>
+          <span class="zh-only">{video.title.zh}</span>
+          <span class="en-only">{video.title.en}</span>
+        </h3>
+        <p>
+          <span class="zh-only">{video.description.zh}</span>
+          <span class="en-only">{video.description.en}</span>
+        </p>
+        <div class="pub-links">
+          <a class="pub-link" href={video.bilibili} aria-label={`Bilibili: ${video.title.zh}`}>Bilibili ↗</a>
+          {video.youtube && <a class="pub-link" href={video.youtube} aria-label={`YouTube: ${video.title.en}`}>YouTube ↗</a>}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .music-channels { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; font-size: 13px; color: var(--muted); }
+  .music-channels a { color: var(--fg); }
+  .music-grid > :first-child { grid-column: 1 / -1; }
+</style>

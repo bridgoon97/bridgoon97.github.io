@@ -10,6 +10,17 @@ export interface Highlight {
 
 export const highlights: Highlight[] = [
   {
+    badge: { zh: '语音前端', en: 'SPEECH' },
+    title: {
+      zh: '多麦克风语音前端与端侧部署',
+      en: 'Multi-microphone speech front ends',
+    },
+    desc: {
+      zh: '面向消费终端设计拾音算法链路与神经网络，完成边缘 NPU 部署；通过声学仿真和算法效果验证，指导麦克风硬件布局。',
+      en: 'Processing-chain and neural network design for consumer devices, with edge NPU deployment. Acoustic simulation and algorithm evaluation guide microphone hardware layouts.',
+    },
+  },
+  {
     badge: { zh: 'PSZ', en: 'PSZ' },
     title: {
       zh: '头部追踪的独立音区',
